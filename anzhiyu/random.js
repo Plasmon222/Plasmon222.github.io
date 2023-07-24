@@ -1,1 +1,1 @@
-var posts=["2023/05/10/SSM框架整合/","2023/01/01/Math/","2023/05/10/二分模板/","2023/05/26/String转换为Int类型的方法：/","2023/05/10/图书管理系统/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/01/01/Math/","2023/05/10/SSM框架整合/","2023/05/10/二分模板/","2023/05/10/图书管理系统/","2023/05/26/String转换为Int类型的方法：/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
