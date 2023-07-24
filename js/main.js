@@ -1,9 +1,9 @@
 // 第一次播放音乐
 var anzhiyu_musicFirst = false;
+// 快捷键
+var anzhiyu_keyboard = null;
 // 音乐播放状态
 var anzhiyu_musicPlaying = false;
-// 是否开启快捷键
-var anzhiyu_keyboard = localStorage.getItem("keyboardToggle") ? localStorage.getItem("keyboardToggle") : false;
 var $web_container = document.getElementById("web_container");
 var $web_box = document.getElementById("web_box");
 var $bodyWrap = document.getElementById("body-wrap");
@@ -507,6 +507,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!item.classList.contains("lazyload") || arr.length < limit) {
         // 不懒加载
         item.innerHTML = htmlStr(arr);
+        item.nextElementSibling.style.display = "none"
       } else {
         if (!item.classList.contains("btn_album_detail_lazyload") || item.classList.contains("page_img_lazyload")) {
           // 滚动懒加载
@@ -898,30 +899,6 @@ document.addEventListener("DOMContentLoaded", function () {
         : saveToLocal.set("aside-status", "hide", 2);
       $htmlDom.toggle("hide-aside");
     },
-    switchConsole: () => {
-      // switch console
-      const consoleEl = document.getElementById("console");
-      //初始化隐藏边栏
-      const $htmlDom = document.documentElement.classList;
-      $htmlDom.contains("hide-aside")
-        ? document.querySelector("#consoleHideAside").classList.add("on")
-        : document.querySelector("#consoleHideAside").classList.remove("on");
-      if (consoleEl.classList.contains("show")) {
-        consoleEl.classList.remove("show");
-      } else {
-        consoleEl.classList.add("show");
-      }
-      const consoleKeyboard = document.querySelector("#consoleKeyboard");
-      if (consoleKeyboard) {
-        if (localStorage.getItem("keyboardToggle") === "true") {
-          consoleKeyboard.classList.add("on");
-          anzhiyu_keyboard = true;
-        } else {
-          consoleKeyboard.classList.remove("on");
-          anzhiyu_keyboard = false;
-        }
-      }
-    },
 
     runMobileToc: () => {
       if (window.getComputedStyle(document.getElementById("card-toc")).getPropertyValue("opacity") === "0")
@@ -950,9 +927,6 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "hide-aside-btn":
         rightSideFn.hideAsideBtn();
-        break;
-      case "center-console":
-        rightSideFn.switchConsole();
         break;
       default:
         break;
@@ -1164,11 +1138,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  const relativeDate = function (selector) {
+  const relativeDate = function (selector, simple = false) {
     selector.forEach(item => {
       const $this = item;
       const timeVal = $this.getAttribute("datetime");
-      $this.innerText = anzhiyu.diffDate(timeVal, true);
+      if (simple) {
+        $this.innerText = anzhiyu.diffDate(timeVal, false, simple);
+      } else {
+        $this.innerText = anzhiyu.diffDate(timeVal, true);
+      }
       $this.style.display = "inline";
     });
   };
@@ -1279,6 +1257,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    if (!GLOBAL_CONFIG.changeMainColorPost) {
+      root.style.setProperty("--anzhiyu-bar-background", "var(--anzhiyu-theme)");
+      anzhiyu.initThemeColor();
+      return
+    }
     const httpRequest = new XMLHttpRequest();
     httpRequest.open("GET", `${path}?imageAve`, true);
     httpRequest.send();
@@ -1458,6 +1441,11 @@ document.addEventListener("DOMContentLoaded", function () {
     GLOBAL_CONFIG.islazyload && lazyloadImg();
     GLOBAL_CONFIG.copyright !== undefined && addCopyright();
     GLOBAL_CONFIG.navMusic && listenNavMusicPause();
+    if (GLOBAL_CONFIG.shortcutKey && document.getElementById("consoleKeyboard")) {
+      localStorage.setItem("keyboardToggle", "true")
+      document.getElementById("consoleKeyboard").classList.add("on");
+      anzhiyu_keyboard = true;
+    }
     clickFnOfSubMenu();
   };
 
@@ -1468,7 +1456,11 @@ document.addEventListener("DOMContentLoaded", function () {
       GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice();
       GLOBAL_CONFIG.relativeDate.post && relativeDate(document.querySelectorAll("#post-meta time"));
     } else {
-      GLOBAL_CONFIG.relativeDate.homepage && relativeDate(document.querySelectorAll("#recent-posts time"));
+      if(GLOBAL_CONFIG.relativeDate.homepage) {
+        relativeDate(document.querySelectorAll("#recent-posts time"));
+      } else if (GLOBAL_CONFIG.relativeDate.simplehomepage) {
+        relativeDate(document.querySelectorAll("#recent-posts time"), true);
+      }
       GLOBAL_CONFIG.runtime && addRuntime();
       addLastPushDate();
       toggleCardCategory();
