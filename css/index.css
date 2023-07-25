@@ -9315,12 +9315,12 @@ h1.page-title + .tag-cloud-list {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: rotate(10deg) translateY(-10%) scale(2);
-  -moz-transform: rotate(10deg) translateY(-10%) scale(2);
-  -o-transform: rotate(10deg) translateY(-10%) scale(2);
-  -ms-transform: rotate(10deg) translateY(-10%) scale(2);
-  transform: rotate(10deg) translateY(-10%) scale(2);
-  filter: blur(10px) brightness(60%);
+  -webkit-transform: rotate(0deg) translateY(-10%) scale(1);
+  -moz-transform: rotate(0deg) translateY(-10%) scale(1);
+  -o-transform: rotate(0deg) translateY(-10%) scale(1);
+  -ms-transform: rotate(0deg) translateY(-10%) scale(1);
+  transform: rotate(0deg) translateY(-10%) scale(1);
+  filter: blur(0px) brightness(80%);
   -webkit-animation: none;
   -moz-animation: none;
   -o-animation: none;
