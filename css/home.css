@@ -13,3 +13,6 @@
   #recent-posts > .recent-post-item:not(a):hover::before {
     transform: translateX(100%) skewX(-60deg);
   }
+  #post-top-cover {
+    filter: blur(0px) brightness(80%)!imporant;
+    }
