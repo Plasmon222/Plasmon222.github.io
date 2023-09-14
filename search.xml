@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>Java常用的方法</title>
-      <link href="/2023/05/10/Java%E5%B8%B8%E7%94%A8/"/>
-      <url>/2023/05/10/Java%E5%B8%B8%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<p>[TOC]</p><h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="Java原生"><a href="#Java原生" class="headerlink" title="Java原生"></a>Java原生</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="正则表达式类匹配"><a href="#正则表达式类匹配" class="headerlink" title="正则表达式类匹配"></a>正则表达式类匹配</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringUtil</span> &#123;</span><br><span class="line">    <span class="comment">//判空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isNotEmpty</span><span class="params">(String param)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param != <span class="literal">null</span> &amp;&amp; !<span class="string">&quot;&quot;</span>.equals(param.trim());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//检查匹配</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">checkStr</span><span class="params">(String inputString)</span>&#123;</span><br><span class="line">        String canshu=inputString;</span><br><span class="line">        <span class="type">boolean</span> checkStrReturn=<span class="literal">false</span>;</span><br><span class="line">        String pattern=<span class="string">&quot;.+&quot;</span>;</span><br><span class="line">        Pattern p=Pattern.compile(pattern);</span><br><span class="line">        <span class="keyword">if</span>(StringUtil.isNotEmpty(pattern))&#123;</span><br><span class="line">            Matcher m=p.matcher(canshu);</span><br><span class="line">            <span class="type">boolean</span> <span class="variable">matches</span> <span class="operator">=</span> m.matches();</span><br><span class="line">            checkStrReturn=matches;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> checkStrReturn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="类型互换"><a href="#类型互换" class="headerlink" title="类型互换"></a>类型互换</h4><h5 id="String转换为Int类型的方法"><a href="#String转换为Int类型的方法" class="headerlink" title="String转换为Int类型的方法"></a>String转换为Int类型的方法</h5><p>在 Integer 类内部包含一些和 int 类型操作有关的方法，表 1 列出了这些常用的方法。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k=<span class="number">90</span>;</span><br><span class="line">String str=String.valueOf(k);</span><br><span class="line">String sr=<span class="string">&quot;90&quot;</span>;</span><br><span class="line"><span class="type">int</span> l=Integer.valueOf(sr);</span><br></pre></td></tr></table></figure><table><thead><tr><th>方法</th><th>返回值</th><th>功能</th></tr></thead><tbody><tr><td>byteValue()</td><td>byte</td><td>以 byte 类型返回该 Integer 的值</td></tr><tr><td>shortValue()</td><td>short</td><td>以 short 类型返回该 Integer 的值</td></tr><tr><td>intValue()</td><td>int</td><td>以 int 类型返回该 Integer 的值</td></tr><tr><td>toString()</td><td>String</td><td>返回一个表示该 Integer 值的 String 对象</td></tr><tr><td>equals(Object obj)</td><td>boolean</td><td>比较此对象与指定对象是否相等</td></tr><tr><td>compareTo(Integer anotherlnteger)</td><td>int</td><td>在数字上比较两个 Integer 对象，如相等，则返回 0； 如调用对象的数值小于 anotherlnteger 的数值，则返回负值； 如调用对象的数值大于 anotherlnteger 的数值，则返回正值</td></tr><tr><td>valueOf(String s)</td><td>Integer</td><td>返回保存指定的 String 值的 Integer 对象</td></tr><tr><td>parseInt(String s)</td><td>int</td><td>将数字字符串转换为 int 数值</td></tr></tbody></table><p>在实际的编程过程中，经常将字符串转换为 int 类型的数值，或者将 int 类型的数值转换为对应的字符串。以下代码演示如何实现这两种功能：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">纯文本复制</span><br><span class="line">String str = &quot;456&quot;;int num = Integer.parseInt(str);    // 将字符串转换为int类型的数值int i = 789;String s = Integer.toString(i);    // 将int类型的数值转换为字符串</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> pdshu=Integer.parseInt(diyige);</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k=<span class="number">90</span>;</span><br><span class="line">String str=String.valueOf(k);</span><br><span class="line">String sr=<span class="string">&quot;90&quot;</span>;</span><br><span class="line"><span class="type">int</span> l=Integer.valueOf(sr);</span><br></pre></td></tr></table></figure><h3 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h3><h4 id="二分模板"><a href="#二分模板" class="headerlink" title="二分模板"></a>二分模板</h4><p>二分查找：可以实现查找某个数字第一次出现的位置下标。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedInputStream;</span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.io.StreamTokenizer;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"> </span><br><span class="line">public class Main &#123;</span><br><span class="line">static int num[];</span><br><span class="line">public static void main(String[] args) throws Exception&#123;</span><br><span class="line">Read sc=new Read();</span><br><span class="line">int n=sc.nextInt();</span><br><span class="line">int m=sc.nextInt();</span><br><span class="line">num=new int[n];</span><br><span class="line">for(int i=0;i&lt;n;i++) &#123;</span><br><span class="line">num[i]=sc.nextInt();</span><br><span class="line">&#125;</span><br><span class="line">while(m--&gt;0) &#123;</span><br><span class="line">int target=sc.nextInt();</span><br><span class="line">int left=0;</span><br><span class="line">int right=n-1;</span><br><span class="line">while(left&lt;right) &#123;//二分模板</span><br><span class="line">int mid=(left+right)/2;</span><br><span class="line"> if(num[mid]&lt;target) &#123;</span><br><span class="line">left=mid+1;</span><br><span class="line">&#125;</span><br><span class="line">else if(num[mid]&gt;=target) &#123;</span><br><span class="line">right=mid;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">if(num[left]==target)</span><br><span class="line">System.out.print((left+1)+&quot; &quot;);</span><br><span class="line">else &#123;</span><br><span class="line">System.out.print(&quot;-1 &quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//快读</span><br><span class="line">class Read&#123;</span><br><span class="line">StreamTokenizer st=new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));</span><br><span class="line">public int nextInt() throws Exception&#123;</span><br><span class="line">st.nextToken();</span><br><span class="line">return (int)st.nval;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="Java框架"><a href="#Java框架" class="headerlink" title="Java框架"></a>Java框架</h2><h3 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h3><h4 id="Mapper语法"><a href="#Mapper语法" class="headerlink" title="Mapper语法"></a>Mapper语法</h4><h5 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO $&#123;biaoName&#125;(id,phone_num,satisfaction,message,crt_time)</span><br><span class="line">VALUES (1,15510001000,5,&#x27;这是一个留言内容&#x27;,NOW())</span><br></pre></td></tr></table></figure><h5 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h5><p>查询结果根据时间排序</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;xxx&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;xxxMap&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.util.Map&quot;</span>&gt;</span></span><br><span class="line">SELECT</span><br><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">&quot;Base_Column_List&quot;</span>/&gt;</span></span><br><span class="line">FROM $&#123;biaoName&#125;</span><br><span class="line">WHERE 1=1</span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;id!=null and id  !=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND id = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;startTime!=null and startTime!=&#x27;&#x27; and endTime!=null and endTime!=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND crt_time between STR_TO_DATE(#&#123;startTime&#125;,&#x27;%Y-%m-%d %H:%i:%s&#x27;) and STR_TO_DATE(#&#123;endTime&#125;,&#x27;%Y-%m-%d %H:%i:%s&#x27;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    ORDER by crt_time DESC</span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start !=&#x27;-1&#x27; and limit !=&#x27;-1&#x27;&quot;</span>&gt;</span></span><br><span class="line">    limit #&#123;start&#125;,#&#123;limit&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure><p>查询有多少条数据</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;xxx&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Integer&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.util.Map&quot;</span>&gt;</span></span><br><span class="line"> SELECT count(0) as rowCount</span><br><span class="line"> FROM $&#123;tableName&#125;</span><br><span class="line"> WHERE 1=1</span><br><span class="line"> <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;id!=null and id  !=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND id = #&#123;id&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Java其他知识"><a href="#Java其他知识" class="headerlink" title="Java其他知识"></a>Java其他知识</h2><h3 id="SpringCloud与Dubbo的区别"><a href="#SpringCloud与Dubbo的区别" class="headerlink" title="SpringCloud与Dubbo的区别"></a>SpringCloud与Dubbo的区别</h3><p>两者都是现在主流的微服务框架，但却存在不少差异：</p><p>初始定位不同： SpringCloud定位为微服务架构下的一站式解决方案；Dubbo 是 SOA 时代的产物，它的关注点主要在于服务的调用和治理</p><p>生态环境不同： SpringCloud依托于Spring平台，具备更加完善的生态体系；而Dubbo一开始只是做RPC远程调用，生态相对匮乏，现在逐渐丰富起来。</p><p>调用方式： SpringCloud是采用Http协议做远程调用，接口一般是Rest风格，比较灵活；Dubbo是采用Dubbo协议，接口一般是Java的Service接口，格式固定。但调用时采用Netty的NIO方式，性能较好。</p><p>组件差异比较多，例如SpringCloud注册中心一般用Eureka，而Dubbo用的是Zookeeper</p><p>SpringCloud生态丰富，功能完善，更像是品牌机，Dubbo则相对灵活，可定制性强，更像是组装机。</p><p>SpringCloud：Spring公司开源的微服务框架，SpirngCloud 定位为微服务架构下的一站式解决方案。</p><p>Dubbo：阿里巴巴开源的RPC框架，Dubbo 是 SOA 时代的产物，它的关注点主要在于服务的调用，流量分发、流量监控和熔断</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> java学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>SSM框架整合</title>
       <link href="/2023/05/10/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/"/>
       <url>/2023/05/10/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/</url>
@@ -79,36 +54,39 @@
     </entry>
     
     
-  
-  
-    
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>Java常用的方法</title>
+      <link href="/2023/05/10/Java%E5%B8%B8%E7%94%A8/"/>
+      <url>/2023/05/10/Java%E5%B8%B8%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/java学习/")'><card data-image="https://bu.dusays.com/2023/05/15/64623927bcd8d.png"><h1 slot="header">学习</h1><p slot="content">学习之路长且艰。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/日常生活/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462393d88cba.png">    <h1 slot="header">日常生活</h1>    <p slot="content">在生活中发生的一些事儿。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/其他/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462395407a57.png">    <h1 slot="header">其他</h1>    <p slot="content">一些别的事情</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
+        <content type="html"><![CDATA[<p>[TOC]</p><h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="Java原生"><a href="#Java原生" class="headerlink" title="Java原生"></a>Java原生</h2><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="正则表达式类匹配"><a href="#正则表达式类匹配" class="headerlink" title="正则表达式类匹配"></a>正则表达式类匹配</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringUtil</span> &#123;</span><br><span class="line">    <span class="comment">//判空</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isNotEmpty</span><span class="params">(String param)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param != <span class="literal">null</span> &amp;&amp; !<span class="string">&quot;&quot;</span>.equals(param.trim());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//检查匹配</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">checkStr</span><span class="params">(String inputString)</span>&#123;</span><br><span class="line">        String canshu=inputString;</span><br><span class="line">        <span class="type">boolean</span> checkStrReturn=<span class="literal">false</span>;</span><br><span class="line">        String pattern=<span class="string">&quot;.+&quot;</span>;</span><br><span class="line">        Pattern p=Pattern.compile(pattern);</span><br><span class="line">        <span class="keyword">if</span>(StringUtil.isNotEmpty(pattern))&#123;</span><br><span class="line">            Matcher m=p.matcher(canshu);</span><br><span class="line">            <span class="type">boolean</span> <span class="variable">matches</span> <span class="operator">=</span> m.matches();</span><br><span class="line">            checkStrReturn=matches;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> checkStrReturn;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="类型互换"><a href="#类型互换" class="headerlink" title="类型互换"></a>类型互换</h4><h5 id="String转换为Int类型的方法"><a href="#String转换为Int类型的方法" class="headerlink" title="String转换为Int类型的方法"></a>String转换为Int类型的方法</h5><p>在 Integer 类内部包含一些和 int 类型操作有关的方法，表 1 列出了这些常用的方法。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k=<span class="number">90</span>;</span><br><span class="line">String str=String.valueOf(k);</span><br><span class="line">String sr=<span class="string">&quot;90&quot;</span>;</span><br><span class="line"><span class="type">int</span> l=Integer.valueOf(sr);</span><br></pre></td></tr></table></figure><table><thead><tr><th>方法</th><th>返回值</th><th>功能</th></tr></thead><tbody><tr><td>byteValue()</td><td>byte</td><td>以 byte 类型返回该 Integer 的值</td></tr><tr><td>shortValue()</td><td>short</td><td>以 short 类型返回该 Integer 的值</td></tr><tr><td>intValue()</td><td>int</td><td>以 int 类型返回该 Integer 的值</td></tr><tr><td>toString()</td><td>String</td><td>返回一个表示该 Integer 值的 String 对象</td></tr><tr><td>equals(Object obj)</td><td>boolean</td><td>比较此对象与指定对象是否相等</td></tr><tr><td>compareTo(Integer anotherlnteger)</td><td>int</td><td>在数字上比较两个 Integer 对象，如相等，则返回 0； 如调用对象的数值小于 anotherlnteger 的数值，则返回负值； 如调用对象的数值大于 anotherlnteger 的数值，则返回正值</td></tr><tr><td>valueOf(String s)</td><td>Integer</td><td>返回保存指定的 String 值的 Integer 对象</td></tr><tr><td>parseInt(String s)</td><td>int</td><td>将数字字符串转换为 int 数值</td></tr></tbody></table><p>在实际的编程过程中，经常将字符串转换为 int 类型的数值，或者将 int 类型的数值转换为对应的字符串。以下代码演示如何实现这两种功能：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">纯文本复制</span><br><span class="line">String str = &quot;456&quot;;int num = Integer.parseInt(str);    // 将字符串转换为int类型的数值int i = 789;String s = Integer.toString(i);    // 将int类型的数值转换为字符串</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> pdshu=Integer.parseInt(diyige);</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> k=<span class="number">90</span>;</span><br><span class="line">String str=String.valueOf(k);</span><br><span class="line">String sr=<span class="string">&quot;90&quot;</span>;</span><br><span class="line"><span class="type">int</span> l=Integer.valueOf(sr);</span><br></pre></td></tr></table></figure><h3 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h3><h4 id="二分模板"><a href="#二分模板" class="headerlink" title="二分模板"></a>二分模板</h4><p>二分查找：可以实现查找某个数字第一次出现的位置下标。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedInputStream;</span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.io.StreamTokenizer;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"> </span><br><span class="line">public class Main &#123;</span><br><span class="line">static int num[];</span><br><span class="line">public static void main(String[] args) throws Exception&#123;</span><br><span class="line">Read sc=new Read();</span><br><span class="line">int n=sc.nextInt();</span><br><span class="line">int m=sc.nextInt();</span><br><span class="line">num=new int[n];</span><br><span class="line">for(int i=0;i&lt;n;i++) &#123;</span><br><span class="line">num[i]=sc.nextInt();</span><br><span class="line">&#125;</span><br><span class="line">while(m--&gt;0) &#123;</span><br><span class="line">int target=sc.nextInt();</span><br><span class="line">int left=0;</span><br><span class="line">int right=n-1;</span><br><span class="line">while(left&lt;right) &#123;//二分模板</span><br><span class="line">int mid=(left+right)/2;</span><br><span class="line"> if(num[mid]&lt;target) &#123;</span><br><span class="line">left=mid+1;</span><br><span class="line">&#125;</span><br><span class="line">else if(num[mid]&gt;=target) &#123;</span><br><span class="line">right=mid;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">if(num[left]==target)</span><br><span class="line">System.out.print((left+1)+&quot; &quot;);</span><br><span class="line">else &#123;</span><br><span class="line">System.out.print(&quot;-1 &quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//快读</span><br><span class="line">class Read&#123;</span><br><span class="line">StreamTokenizer st=new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));</span><br><span class="line">public int nextInt() throws Exception&#123;</span><br><span class="line">st.nextToken();</span><br><span class="line">return (int)st.nval;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="Java框架"><a href="#Java框架" class="headerlink" title="Java框架"></a>Java框架</h2><h3 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h3><h4 id="Mapper语法"><a href="#Mapper语法" class="headerlink" title="Mapper语法"></a>Mapper语法</h4><h5 id="插入语句"><a href="#插入语句" class="headerlink" title="插入语句"></a>插入语句</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO $&#123;biaoName&#125;(id,phone_num,satisfaction,message,crt_time)</span><br><span class="line">VALUES (1,15510001000,5,&#x27;这是一个留言内容&#x27;,NOW())</span><br></pre></td></tr></table></figure><h5 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h5><p>查询结果根据时间排序</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;xxx&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;xxxMap&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.util.Map&quot;</span>&gt;</span></span><br><span class="line">SELECT</span><br><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">&quot;Base_Column_List&quot;</span>/&gt;</span></span><br><span class="line">FROM $&#123;biaoName&#125;</span><br><span class="line">WHERE 1=1</span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;id!=null and id  !=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND id = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;startTime!=null and startTime!=&#x27;&#x27; and endTime!=null and endTime!=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND crt_time between STR_TO_DATE(#&#123;startTime&#125;,&#x27;%Y-%m-%d %H:%i:%s&#x27;) and STR_TO_DATE(#&#123;endTime&#125;,&#x27;%Y-%m-%d %H:%i:%s&#x27;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    ORDER by crt_time DESC</span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start !=&#x27;-1&#x27; and limit !=&#x27;-1&#x27;&quot;</span>&gt;</span></span><br><span class="line">    limit #&#123;start&#125;,#&#123;limit&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure><p>查询有多少条数据</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;xxx&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Integer&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;java.util.Map&quot;</span>&gt;</span></span><br><span class="line"> SELECT count(0) as rowCount</span><br><span class="line"> FROM $&#123;tableName&#125;</span><br><span class="line"> WHERE 1=1</span><br><span class="line"> <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;id!=null and id  !=&#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">AND id = #&#123;id&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Java其他知识"><a href="#Java其他知识" class="headerlink" title="Java其他知识"></a>Java其他知识</h2><h3 id="SpringCloud与Dubbo的区别"><a href="#SpringCloud与Dubbo的区别" class="headerlink" title="SpringCloud与Dubbo的区别"></a>SpringCloud与Dubbo的区别</h3><p>两者都是现在主流的微服务框架，但却存在不少差异：</p><p>初始定位不同： SpringCloud定位为微服务架构下的一站式解决方案；Dubbo 是 SOA 时代的产物，它的关注点主要在于服务的调用和治理</p><p>生态环境不同： SpringCloud依托于Spring平台，具备更加完善的生态体系；而Dubbo一开始只是做RPC远程调用，生态相对匮乏，现在逐渐丰富起来。</p><p>调用方式： SpringCloud是采用Http协议做远程调用，接口一般是Rest风格，比较灵活；Dubbo是采用Dubbo协议，接口一般是Java的Service接口，格式固定。但调用时采用Netty的NIO方式，性能较好。</p><p>组件差异比较多，例如SpringCloud注册中心一般用Eureka，而Dubbo用的是Zookeeper</p><p>SpringCloud生态丰富，功能完善，更像是品牌机，Dubbo则相对灵活，可定制性强，更像是组装机。</p><p>SpringCloud：Spring公司开源的微服务框架，SpirngCloud 定位为微服务架构下的一站式解决方案。</p><p>Dubbo：阿里巴巴开源的RPC框架，Dubbo 是 SOA 时代的产物，它的关注点主要在于服务的调用，流量分发、流量监控和熔断</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
       
     </entry>
     
+    
+  
+  
     
     
     <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -128,11 +106,22 @@
     
     
     <entry>
-      <title>照片</title>
-      <link href="/dailyPhoto/index.html"/>
-      <url>/dailyPhoto/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/welcome.css"/>
+      <url>/css/welcome.css</url>
+      
+        <content type="html"><![CDATA[#welcome-info {    overflow: hidden;    border-radius: 14px;    --kouseki-welcome-color: #49B1F5;    --kouseki-ip-color: #49B1F5;    --kouseki-gl-size: 16px!important;  }]]></content>
       
     </entry>
     
@@ -151,10 +140,32 @@
     
     <entry>
       <title></title>
-      <link href="/css/welcome.css"/>
-      <url>/css/welcome.css</url>
+      <link href="/css/home.css"/>
+      <url>/css/home.css</url>
       
-        <content type="html"><![CDATA[#welcome-info {    overflow: hidden;    border-radius: 14px;    --kouseki-welcome-color: #49B1F5;    --kouseki-ip-color: #49B1F5;    --kouseki-gl-size: 16px!important;  }]]></content>
+        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {    content: "";    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 200%;    background: linear-gradient(to right, transparent, white, transparent);    transform: translateX(-200%);    transition: transform 0.5s linear;    z-index: 1;  }  #recent-posts > .recent-post-item:not(a):hover::before {    transform: translateX(100%) skewX(-60deg);  }  #post-top-cover {    filter: blur(0px) brightness(80%)!imporant;    }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>泰拉大陆</title>
+      <link href="/wordScenery/index.html"/>
+      <url>/wordScenery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/java学习/")'><card data-image="https://bu.dusays.com/2023/05/15/64623927bcd8d.png"><h1 slot="header">学习</h1><p slot="content">学习之路长且艰。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/日常生活/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462393d88cba.png">    <h1 slot="header">日常生活</h1>    <p slot="content">在生活中发生的一些事儿。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/其他/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462395407a57.png">    <h1 slot="header">其他</h1>    <p slot="content">一些别的事情</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
       
     </entry>
     
@@ -173,17 +184,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/home.css"/>
-      <url>/css/home.css</url>
-      
-        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {    content: "";    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 200%;    background: linear-gradient(to right, transparent, white, transparent);    transform: translateX(-200%);    transition: transform 0.5s linear;    z-index: 1;  }  #recent-posts > .recent-post-item:not(a):hover::before {    transform: translateX(100%) skewX(-60deg);  }  #post-top-cover {    filter: blur(0px) brightness(80%)!imporant;    }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/json/music.json"/>
       <url>/json/music.json</url>
       
@@ -194,9 +194,9 @@
     
     
     <entry>
-      <title>我的装备</title>
-      <link href="/equipment/index.html"/>
-      <url>/equipment/index.html</url>
+      <title>音乐馆</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -216,17 +216,6 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/js/welcome.js"/>
       <url>/js/welcome.js</url>
@@ -238,9 +227,9 @@
     
     
     <entry>
-      <title>音乐馆</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>我的装备</title>
+      <link href="/equipment/index.html"/>
+      <url>/equipment/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -249,9 +238,20 @@
     
     
     <entry>
-      <title>泰拉大陆</title>
-      <link href="/wordScenery/index.html"/>
-      <url>/wordScenery/index.html</url>
+      <title>照片</title>
+      <link href="/dailyPhoto/index.html"/>
+      <url>/dailyPhoto/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
