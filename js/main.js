@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return top <= viewPortHeight;
       }
 
-      if (isInViewPortOfOneNoDis(pageBottomDomFlag) || percentage > 90) {
+      if (isInViewPortOfOneNoDis(pageBottomDomFlag || percentage > 90) && currentTop > 20) {
         $navTotop.classList.add("long");
         $percentBtn.textContent = "返回顶部";
       } else {
@@ -1468,7 +1468,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 监听nav是否被其他音频暂停⏸️
   const listenNavMusicPause = function () {
     const timer = setInterval(() => {
-      if (navMusicEl.querySelector("#nav-music meting-js").aplayer) {
+      if (navMusicEl && navMusicEl.querySelector("#nav-music meting-js").aplayer) {
         clearInterval(timer);
         let msgPlay = '<i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span>';
         let msgPause = '<i class="anzhiyufont anzhiyu-icon-pause"></i><span>暂停音乐</span>';
@@ -1816,6 +1816,8 @@ document.addEventListener("DOMContentLoaded", function () {
     anzhiyu.switchRightClickMenuHotReview();
     anzhiyu.getCustomPlayList();
     anzhiyu.addEventListenerConsoleMusicList(false);
+    anzhiyu.initPaginationObserver();
+
     setTimeout(() => {
       setInputFocusListener();
       if (typeof addFriendLinksInFooter === "function") {
