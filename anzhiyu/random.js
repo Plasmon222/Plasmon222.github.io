@@ -1,1 +1,1 @@
-var posts=["2023/05/10/SSM框架整合/","2023/05/10/图书管理系统/","2023/05/10/Java常用/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/05/10/建站心得/","2023/06/01/anzhiyu主题标签/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
