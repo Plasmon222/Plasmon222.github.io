@@ -21,10 +21,11 @@
     padding: 1rem;
     position: relative;
     border-radius: 12px;
-    background-image: url(https://bu.dusays.com/2023/10/26/653a5e734aed6.webp); 
+    background-image: url(); 
     background-size: cover;
     background-position: center;
 }
+/* https://bu.dusays.com/2023/10/26/653a5e734aed6.webp */
 
 #newYear-main * {
     position: relative;
