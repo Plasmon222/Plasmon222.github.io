@@ -165,9 +165,9 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
+      <title>照片</title>
+      <link href="/dailyPhoto/index.html"/>
+      <url>/dailyPhoto/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -187,9 +187,9 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>我的装备</title>
+      <link href="/equipment/index.html"/>
+      <url>/equipment/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -198,11 +198,44 @@
     
     
     <entry>
-      <title>照片</title>
-      <link href="/dailyPhoto/index.html"/>
-      <url>/dailyPhoto/index.html</url>
+      <title></title>
+      <link href="/css/home.css"/>
+      <url>/css/home.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {  content: "";  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 200%;  background: linear-gradient(to right, transparent, white, transparent);  transform: translateX(-200%);  transition: transform 0.5s linear;  z-index: 1;}#recent-posts > .recent-post-item:not(a):hover::before {  transform: translateX(100%) skewX(-60deg);}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/about-tag.css"/>
+      <url>/css/about-tag.css</url>
+      
+        <content type="html"><![CDATA[@keyframes floating {    0% {        transform: translate(0, -4px);    }    50% {        transform: translate(0, 4px);    }    100% {        transform: translate(0, -4px);    }    }        #about-page .author-box {    display: flex;    flex-direction: column;    align-items: center;    height: 185px;    }        #about-page .author-tag-left {    display: flex;    flex-direction: column;    align-items: flex-end;    margin-right: 355px; /* 设置标签与头像之间的水平间距 */    position: absolute;    top: 15px;    }        #about-page .author-tag-right {    display: flex;    flex-direction: column;    align-items: flex-start;    margin-left: 355px; /* 设置标签与头像之间的水平间距 */    position: absolute;    top: 15px;    }    /* 移动端隐藏 */    @media screen and (max-width: 768px) {    #about-page .author-tag-left, #about-page .author-tag-right {        display: none;    }    }        #about-page .author-tag-left .author-tag:first-child, #about-page .author-tag-left .author-tag:last-child {    margin-right: -16px;    }        #about-page .author-tag-right .author-tag:first-child, #about-page .author-tag-right .author-tag:last-child {    margin-left: -16px;    }        #about-page .author-tag {    transform: translate(0, -4px);    padding: 1px 8px;    background: #fff;    border: 1px solid #e3e8f7;    border-radius: 40px;    margin-top: 6px;    font-size: 14px;    font-weight: bold;    box-shadow: 0 5px 12px -5px rgba(102, 68, 68, 0.00);    animation: 4s ease-in-out 0s infinite normal none running floating;    }    /* 适配深色模式 */    [data-theme="dark"] #about-page .author-tag {    background: #1e1e1e;    }    #about-page .author-tag:nth-child(1) {    animation-delay: 0s;    }        #about-page .author-tag:nth-child(2) {    animation-delay: 0.6s;    }        #about-page .author-tag:nth-child(3) {    animation-delay: 1.2s;    }        #about-page .author-tag:nth-child(4) {    animation-delay: 1.8s;    }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/welcome.css"/>
+      <url>/css/welcome.css</url>
+      
+        <content type="html"><![CDATA[#welcome-info {  overflow: hidden;  border-radius: 14px;  --kouseki-welcome-color: #49B1F5;  --kouseki-ip-color: #49B1F5;  --kouseki-gl-size: 16px!important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 魔改自定义 *//* 新年侧边栏 */#newYear {    color: white;    padding: 0 !important;}#newYear p,#newYear h3 {    font-weight: normal;    color: inherit;    margin: 0;}#newYear .item-headline {    display: none;}#newYear-main {    min-height: 160px;    padding: 1rem;    position: relative;    border-radius: 12px;    background-image: url();     background-size: cover;    background-position: center;}/* https://bu.dusays.com/2023/10/26/653a5e734aed6.webp */#newYear-main * {    position: relative;    line-height: 1.3;}#newYear-main .newYear-time {    font-weight: bold;    text-align: center;}#newYear-main .time,#newYear-main .happyNewYear {    font-size: 3.5rem;    margin: 1rem 0;    display: block;}#newYear-main .day {    font-size: 5rem;}#newYear-main .day .unit {    font-size: 1rem;}#newYear-main .mask {    position: absolute;    left: 0;    top: 0;    height: 100%;    width: 100%;    background-color: rgba(0, 0, 0, .1);}]]></content>
       
     </entry>
     
@@ -214,17 +247,6 @@
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/学习/")'><card data-image="https://bu.dusays.com/2023/05/15/64623927bcd8d.png"><h1 slot="header">学习</h1><p slot="content">学习之路长且艰。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/生活/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462393d88cba.png">    <h1 slot="header">生活</h1>    <p slot="content">在生活中发生的一些事儿。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/其他/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462395407a57.png">    <h1 slot="header">其他</h1>    <p slot="content">一些别的事情</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>即刻短文</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -253,39 +275,6 @@
     
     
     <entry>
-      <title></title>
-      <link href="/json/music.json"/>
-      <url>/json/music.json</url>
-      
-        <content type="html"><![CDATA[[{"name":"青花瓷","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.lrc"},{"name":"稻香","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.lrc"},{"name":"晴天","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.lrc"},{"name":"七里香","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.lrc"},{"name":"花海","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.lrc"},{"name":"反方向的钟","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.lrc"},{"name":"兰亭序","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.lrc"},{"name":"说好的辛福呢","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的辛福呢.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的幸福呢.lrc"},{"name":"等你下课 (with 杨瑞代)","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003bSL0v4bpKAx_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.lrc"},{"name":"我落泪情绪零碎","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000bviBl4FjTpO_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.lrc"},{"name":"听妈妈的话","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.lrc"},{"name":"明明就","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003Ow85E3pnoqi_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.lrc"},{"name":"我是如此相信","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000001hGx1Z0so1YX_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.lrc"},{"name":"发如雪","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc"},{"name":"以父之名","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.lrc"},{"name":"园游会","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.lrc"},{"name":"本草纲目","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.lrc"},{"name":"龙卷风","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.lrc"}]]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的装备</title>
-      <link href="/equipment/index.html"/>
-      <url>/equipment/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/welcome.css"/>
-      <url>/css/welcome.css</url>
-      
-        <content type="html"><![CDATA[#welcome-info {  overflow: hidden;  border-radius: 14px;  --kouseki-welcome-color: #49B1F5;  --kouseki-ip-color: #49B1F5;  --kouseki-gl-size: 16px!important;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>音乐馆</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
@@ -297,42 +286,9 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 魔改自定义 *//* 新年侧边栏 */#newYear {    color: white;    padding: 0 !important;}#newYear p,#newYear h3 {    font-weight: normal;    color: inherit;    margin: 0;}#newYear .item-headline {    display: none;}#newYear-main {    min-height: 160px;    padding: 1rem;    position: relative;    border-radius: 12px;    background-image: url();     background-size: cover;    background-position: center;}/* https://bu.dusays.com/2023/10/26/653a5e734aed6.webp */#newYear-main * {    position: relative;    line-height: 1.3;}#newYear-main .newYear-time {    font-weight: bold;    text-align: center;}#newYear-main .time,#newYear-main .happyNewYear {    font-size: 3.5rem;    margin: 1rem 0;    display: block;}#newYear-main .day {    font-size: 5rem;}#newYear-main .day .unit {    font-size: 1rem;}#newYear-main .mask {    position: absolute;    left: 0;    top: 0;    height: 100%;    width: 100%;    background-color: rgba(0, 0, 0, .1);}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/about-tag.css"/>
-      <url>/css/about-tag.css</url>
-      
-        <content type="html"><![CDATA[@keyframes floating {    0% {        transform: translate(0, -4px);    }    50% {        transform: translate(0, 4px);    }    100% {        transform: translate(0, -4px);    }    }        #about-page .author-box {    display: flex;    flex-direction: column;    align-items: center;    height: 185px;    }        #about-page .author-tag-left {    display: flex;    flex-direction: column;    align-items: flex-end;    margin-right: 355px; /* 设置标签与头像之间的水平间距 */    position: absolute;    top: 15px;    }        #about-page .author-tag-right {    display: flex;    flex-direction: column;    align-items: flex-start;    margin-left: 355px; /* 设置标签与头像之间的水平间距 */    position: absolute;    top: 15px;    }    /* 移动端隐藏 */    @media screen and (max-width: 768px) {    #about-page .author-tag-left, #about-page .author-tag-right {        display: none;    }    }        #about-page .author-tag-left .author-tag:first-child, #about-page .author-tag-left .author-tag:last-child {    margin-right: -16px;    }        #about-page .author-tag-right .author-tag:first-child, #about-page .author-tag-right .author-tag:last-child {    margin-left: -16px;    }        #about-page .author-tag {    transform: translate(0, -4px);    padding: 1px 8px;    background: #fff;    border: 1px solid #e3e8f7;    border-radius: 40px;    margin-top: 6px;    font-size: 14px;    font-weight: bold;    box-shadow: 0 5px 12px -5px rgba(102, 68, 68, 0.00);    animation: 4s ease-in-out 0s infinite normal none running floating;    }    /* 适配深色模式 */    [data-theme="dark"] #about-page .author-tag {    background: #1e1e1e;    }    #about-page .author-tag:nth-child(1) {    animation-delay: 0s;    }        #about-page .author-tag:nth-child(2) {    animation-delay: 0.6s;    }        #about-page .author-tag:nth-child(3) {    animation-delay: 1.2s;    }        #about-page .author-tag:nth-child(4) {    animation-delay: 1.8s;    }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/home.css"/>
-      <url>/css/home.css</url>
-      
-        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {  content: "";  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 200%;  background: linear-gradient(to right, transparent, white, transparent);  transform: translateX(-200%);  transition: transform 0.5s linear;  z-index: 1;}#recent-posts > .recent-post-item:not(a):hover::before {  transform: translateX(100%) skewX(-60deg);}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>即刻短文</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -352,11 +308,55 @@
     
     
     <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>友人帐</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
         <content type="html"><![CDATA[<h1>我的友链</h1><div class="tabs" id="mylink"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="mylink-1">🙋 butterfly-💭candy</button><button type="button" class="tab " data-href="mylink-2">☀️Volantis</button><button type="button" class="tab " data-href="mylink-3">🌴General</button><button type="button" class="tab " data-href="mylink-4">Fuild</button><button type="button" class="tab " data-href="mylink-5">Volantis</button><button type="button" class="tab " data-href="mylink-6">Html</button><button type="button" class="tab " data-href="mylink-7">Jade</button></ul><div class="tab-contents"><div class="tab-item-content active" id="mylink-1"><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Plasmon222</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.loveak.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">✨行则将至，做则必成✨</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-2"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Plasmon222&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;screenshot&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://bu.dusays.com/2023/07/26/64c07513293ef.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://blog.loveak.top/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;avatar&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://bu.dusays.com/2023/09/01/64f19e6f783a9.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;✨行则将至，做则必成✨&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span><span class="punctuation">:</span> <span class="string">&quot;离子&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-3"><table><thead><tr><th align="left">名称</th><th align="left">数值</th></tr></thead><tbody><tr><td align="left">站点名称</td><td align="left">Plasmon222</td></tr><tr><td align="left">站点截图</td><td align="left"><a href="https://bu.dusays.com/2023/07/26/64c07513293ef.jpg">https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</a></td></tr><tr><td align="left">站点链接</td><td align="left"><a href="https://blog.loveak.top/">https://blog.loveak.top/</a></td></tr><tr><td align="left">站长头像</td><td align="left"><a href="https://bu.dusays.com/2023/09/01/64f19e6f783a9.png">https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</a></td></tr><tr><td align="left">站点描述</td><td align="left">✨行则将至，做则必成✨</td></tr><tr><td align="left">站点关键词</td><td align="left">离子, 个人博客， 生活</td></tr></tbody></table></div><div class="tab-item-content" id="mylink-4"><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> &#123;</span><br><span class="line">    <span class="attr">title:</span> <span class="string">&quot;Plasmon222&quot;</span>,</span><br><span class="line">    <span class="attr">intro:</span> <span class="string">&quot;✨行则将至，做则必成✨&quot;</span>,</span><br><span class="line">    <span class="attr">link:</span> <span class="string">&quot;https://blog.loveak.top/&quot;</span>,</span><br><span class="line">    <span class="attr">image:</span> <span class="string">&quot;https://bu.dusays.com/2023/07/26/64c07513293ef.jpg&quot;</span>,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-5"><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;title&quot;:</span> <span class="string">&quot;Plasmon222&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;avatar&quot;:</span> <span class="string">&quot;https://bu.dusays.com/2023/09/01/64f19e6f783a9.png&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;screenshot&quot;:</span> <span class="string">&quot;https://bu.dusays.com/2023/07/26/64c07513293ef.jpg&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;url&quot;:</span> <span class="string">&quot;https://blog.loveak.top/&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;:</span> <span class="string">&quot;✨行则将至，做则必成✨&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;group&quot;:</span> ,<span class="comment">#根据你的博客来定义</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-6"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://blog.loveak.top/&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;external nofollow&quot;</span>&gt;</span>离子-✨行则将至，做则必成✨<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-7"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(href=&#x27;https://blog.loveak.top/&#x27; rel=&quot;external nofollow&quot;) 离子-✨行则将至，做则必成✨</span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><details class="folding-tag" ><summary> 友情链接页免责声明 </summary>              <div class='content'>              <h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请你须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ol><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ol><p>但是你在访问的时候，仍然无法避免，包括但不限于：</p><ol><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ol><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果你发现其中包含违反中华人民共和国法律的内容，请及时联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给你造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议联系<code>plasloveak@outlook</code>。</p>              </div>            </details><details class="folding-tag" ><summary> 出现问题的友链 </summary>              <div class='content'>              <h2 id="出现问题的友链"><a href="#出现问题的友链" class="headerlink" title="出现问题的友链"></a>出现问题的友链</h2><p>如果友链出现问题会展示在这里，如果已解决问题还请告知。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>              </div>            </details><h2 id="友情链接申请"><a href="#友情链接申请" class="headerlink" title="友情链接申请"></a>友情链接申请</h2><details class="folding-tag" ><summary> ✅ 加入本站友链须知 </summary>              <div class='content'>              <h2 id="本站添加的友链要求"><a href="#本站添加的友链要求" class="headerlink" title="本站添加的友链要求"></a>本站添加的友链要求</h2><ol><li>能够正常访问</li><li>含本站友链</li><li>网站类型为<strong>个人博客</strong></li></ol><p>请（<a onclick="anzhiyu.addFriendLink()" href="#post-comment">点击这里快速添加</a>） 站点信息申请友情链接，申请后在我不忙的时候会统一添加，即使不通过也会给予邮件回复。</p><h2 id="你提交的信息有可能被修改"><a href="#你提交的信息有可能被修改" class="headerlink" title="你提交的信息有可能被修改"></a>你提交的信息有可能被修改</h2><p>如果有修改，我会将修改内容进行告知</p><ol><li>为了友链相关页面和组件的统一性和美观性，可能会对你的昵称进行缩短处理，例如昵称包含<code>博客</code>、<code>XX 的 XX</code>等内容或形式将被简化。</li><li>为了图片加载速度和内容安全性考虑，头像实际展示图片均使用博客自己图床，所以无法收到贵站自己的头像更新，如果有迫切的更改信息需求，请在本页的评论中添加。</li><li>为了保证鱼塘能够正确抓取文章，所有的友链链接要求为博客主页链接，而不是个人主页链接。</li></ol><h2 id="提交友链信息"><a href="#提交友链信息" class="headerlink" title="提交友链信息"></a>提交友链信息</h2><p>为了避免图床问题，建议你将头像存储到贵站图床。</p><ol><li>我的名称: <code>Plasmon222</code></li><li>网站地址: <code>https://blog.loveak.top/</code></li><li>描述: <code>✨行则将至，做则必成✨</code></li><li>头像: <code>https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</code></li><li>站点截图: <code>https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</code></li></ol><p>参照以下格式留言 📋 即可。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">昵称（请勿包含博客等字样）：</span></span><br><span class="line"><span class="string">网站地址（要求博客地址，请勿提交个人主页）：</span></span><br><span class="line"><span class="string">头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：</span></span><br><span class="line"><span class="string">描述：</span></span><br><span class="line"><span class="string">站点截图:(可选)：</span></span><br></pre></td></tr></table></figure><p>示例 📢：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">昵称：Plasmon222</span></span><br><span class="line"><span class="string">网站地址：https://blog.loveak.top/</span></span><br><span class="line"><span class="string">头像图片url：https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</span></span><br><span class="line"><span class="string">描述：✨行则将至，做则必成✨</span></span><br><span class="line"><span class="string">站点截图:(可选)：https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</span></span><br></pre></td></tr></table></figure><div class="tip faa-horizontal animated"><p>站点截图建议自己提供，尺寸尽量不要大于 300*300。</p><p>未提供站点预览图的，本站会根据贵站链接调用以下 API 自动获取贵站的站点截图。</p><p>对于做了反扒措施的站点，API 获取的将是反扒页面，望知悉。</p></div><p>站点截图建议使用以下 API 获取以匹配本站样式。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anheyu.com/https://&lt;你的域名&gt;/</span><br></pre></td></tr></table></figure>              </div>            </details><ol><li>我的名称: <code>Plasmon222</code></li><li>网站地址: <code>https://blog.loveak.top/</code></li><li>描述: <code>✨行则将至，做则必成✨</code></li><li>头像: <code>https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</code></li><li>站点截图: <code>https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</code></li></ol><p  style="padding: 0px 0px 0px 0.8rem;">请<strong>勾选</strong>你符合的条件：</p><div id="friendlink_checkboxs" style="padding: 0px 0px 0px 1.6rem;">  <p>    <label class="checkbox"><input type="checkbox" id="checkbox1" onclick="checkForm()">我已添加 <b>Plasmon222</b> 博客的友情链接</label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox2" onclick="checkForm()">我的链接主体为 <b>个人</b>，网站类型为<b>博客</b></label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox3" onclick="checkForm()">我的网站现在可以在中国大陆区域正常访问</label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox4" onclick="checkForm()">网站内容符合中国大陆法律法规</label>  </p>    <p>    <label class="checkbox"><input type="checkbox" id="checkbox5" onclick="checkForm()">待人友善，和谐美好。</label>  </p></div><script>    var twikooSubmit = document.getElementsByClassName("tk-submit")[0];    if(twikooSubmit) {      twikooSubmit.style.opacity = "0";    }    function checkForm() {        var checkbox1 = document.getElementById("checkbox1");        var checkbox2 = document.getElementById("checkbox2");        var checkbox3 = document.getElementById("checkbox3");        var checkbox4 = document.getElementById("checkbox4");        var checkbox5 = document.getElementById("checkbox5");        var twikooSubmit = document.getElementsByClassName("tk-submit")[0];        if (checkbox1.checked && checkbox2.checked && checkbox3.checked && checkbox4.checked && checkbox5.checked) {            twikooSubmit.style.opacity = "1";            twikooSubmit.style.height = "auto";            twikooSubmit.style.overflow = "auto";            var input = document.getElementsByClassName('el-textarea__inner')[0];            let evt = document.createEvent('HTMLEvents');            evt.initEvent('input', true, true);            input.value = '昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n';            input.dispatchEvent(evt);            input.focus();            input.setSelectionRange(-1, -1);        } else {            twikooSubmit.style.opacity = "0";            twikooSubmit.style.height = "0";            twikooSubmit.style.overflow = "hidden";        }    }</script><style>.tk-comments > .tk-submit {  opacity: 0;  height: 0;  transition: opacity 0.5s, height 0.5s;  overflow: hidden;}</style>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/json/music.json"/>
+      <url>/json/music.json</url>
+      
+        <content type="html"><![CDATA[[{"name":"青花瓷","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.lrc"},{"name":"稻香","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.lrc"},{"name":"晴天","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.lrc"},{"name":"七里香","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.lrc"},{"name":"花海","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.lrc"},{"name":"反方向的钟","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.lrc"},{"name":"兰亭序","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.lrc"},{"name":"说好的辛福呢","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的辛福呢.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的幸福呢.lrc"},{"name":"等你下课 (with 杨瑞代)","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003bSL0v4bpKAx_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.lrc"},{"name":"我落泪情绪零碎","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000bviBl4FjTpO_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.lrc"},{"name":"听妈妈的话","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.lrc"},{"name":"明明就","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003Ow85E3pnoqi_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.lrc"},{"name":"我是如此相信","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000001hGx1Z0so1YX_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.lrc"},{"name":"发如雪","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc"},{"name":"以父之名","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.lrc"},{"name":"园游会","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.flac","cover":"https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.lrc"},{"name":"本草纲目","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.lrc"},{"name":"龙卷风","artist":"周杰伦","url":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.mp3","cover":"https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000","lrc":"https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.lrc"}]]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
