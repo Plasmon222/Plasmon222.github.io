@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>我的年度总结-2024</title>
+      <link href="/2024/12/22/%E6%88%91%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-2024/"/>
+      <url>/2024/12/22/%E6%88%91%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-2024/</url>
+      
+        <content type="html"><![CDATA[<span class='p center logo large'>我的年度总结-2024</span><span class='p center small'>致我这有些迷茫的一年.</span><p>​</p><p>​</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 年度总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>命运石之门</title>
       <link href="/2024/10/07/%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8/"/>
       <url>/2024/10/07/%E5%91%BD%E8%BF%90%E7%9F%B3%E4%B9%8B%E9%97%A8/</url>
@@ -151,9 +176,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -296,11 +321,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/学习/")'><card data-image="https://bu.dusays.com/2023/05/15/64623927bcd8d.png"><h1 slot="header">学习</h1><p slot="content">学习之路长且艰。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/生活/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462393d88cba.png">    <h1 slot="header">生活</h1>    <p slot="content">在生活中发生的一些事儿。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/其他/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462395407a57.png">    <h1 slot="header">其他</h1>    <p slot="content">一些别的事情</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
       
     </entry>
     
@@ -318,33 +343,11 @@
     
     
     <entry>
-      <title>留言板</title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>照片</title>
-      <link href="/dailyPhoto/index.html"/>
-      <url>/dailyPhoto/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[<style>  #libCategories .card-wrap:hover .card-info:after {    width: 300%;  }</style><link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/js-heo@1.0.11/3dCard/no3d.css"><div id='libCategories'><div id="lib-cards" class="container"><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/学习/")'><card data-image="https://bu.dusays.com/2023/05/15/64623927bcd8d.png"><h1 slot="header">学习</h1><p slot="content">学习之路长且艰。</p></card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/生活/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462393d88cba.png">    <h1 slot="header">生活</h1>    <p slot="content">在生活中发生的一些事儿。</p>  </card></a><a href='javascript:void(0);' onClick='pjax.loadUrl("/categories/其他/")'>  <card data-image="https://bu.dusays.com/2023/05/15/6462395407a57.png">    <h1 slot="header">其他</h1>    <p slot="content">一些别的事情</p>  </card></a></div></div><script src='https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js' data-pjax></script><script type="text/javascript" src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.7/no3d/no3d.js" data-pjax></script>]]></content>
       
     </entry>
     
@@ -374,6 +377,61 @@
     
     <entry>
       <title></title>
+      <link href="/css/home.css"/>
+      <url>/css/home.css</url>
+      
+        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {  content: "";  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 200%;  background: linear-gradient(to right, transparent, white, transparent);  transform: translateX(-200%);  transition: transform 0.5s linear;  z-index: 1;}#recent-posts > .recent-post-item:not(a):hover::before {  transform: translateX(100%) skewX(-60deg);}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>即刻短文</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>照片</title>
+      <link href="/dailyPhoto/index.html"/>
+      <url>/dailyPhoto/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/newYear.js"/>
+      <url>/js/newYear.js</url>
+      
+        <content type="html"><![CDATA[let newYearTimer = null;var newYear = () => {    clearTimeout(newYearTimer);    if (!document.querySelector('#newYear')) return;    // 新年时间戳 and 星期对象    let newYear = new Date('2025-01-01 00:00:00').getTime() / 1000,        week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }    time();    // 补零函数    function nol(h) { return h > 9 ? h : '0' + h; };    function time() {        // 现在 时间对象        let now = new Date();        // 右下角 今天        document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]        // 现在与新年相差秒数        let second = newYear - Math.round(now.getTime() / 1000);        // 小于0则表示已经过年        if (second < 0) {            document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';            document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';        } else {            // 大于0则还未过年            document.querySelector('#newYear .title').innerHTML = '距离2025年新年：'            // 大于一天则直接渲染天数            if (second > 86400) {                document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`            } else {                // 小于一天则使用时分秒计时。                let h = nol(parseInt(second / 3600));                second %= 3600;                let m = nol(parseInt(second / 60));                second %= 60;                let s = nol(second);                document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;                // 计时                newYearTimer = setTimeout(time, 1000);            }        }    }    // 元宝飘落    jQuery(document).ready(function ($) {        $('#newYear').wpSuperSnow({            flakes: ['', '', ''],            totalFlakes: '100',            zIndex: '999999',            maxSize: '30',            maxDuration: '20',            useFlakeTrans: false        });    });}// Pjax适配：若没有开启Pjax这里直接是newYear()即可// 开了Pjax的用以下两句document.addEventListener('pjax:complete', newYear);document.addEventListener('DOMContentLoaded', newYear);]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/css/welcome.css"/>
       <url>/css/welcome.css</url>
       
@@ -396,50 +454,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/home.css"/>
-      <url>/css/home.css</url>
-      
-        <content type="html"><![CDATA[#recent-posts > .recent-post-item:not(a)::before {  content: "";  position: absolute;  top: 0;  left: 0;  width: 100%;  height: 200%;  background: linear-gradient(to right, transparent, white, transparent);  transform: translateX(-200%);  transition: transform 0.5s linear;  z-index: 1;}#recent-posts > .recent-post-item:not(a):hover::before {  transform: translateX(100%) skewX(-60deg);}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/newYear.js"/>
-      <url>/js/newYear.js</url>
-      
-        <content type="html"><![CDATA[let newYearTimer = null;var newYear = () => {    clearTimeout(newYearTimer);    if (!document.querySelector('#newYear')) return;    // 新年时间戳 and 星期对象    let newYear = new Date('2025-01-01 00:00:00').getTime() / 1000,        week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }    time();    // 补零函数    function nol(h) { return h > 9 ? h : '0' + h; };    function time() {        // 现在 时间对象        let now = new Date();        // 右下角 今天        document.querySelector('#newYear .today').innerHTML = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate() + ' ' + week[now.getDay()]        // 现在与新年相差秒数        let second = newYear - Math.round(now.getTime() / 1000);        // 小于0则表示已经过年        if (second < 0) {            document.querySelector('#newYear .title').innerHTML = 'Happy New Year!';            document.querySelector('#newYear .newYear-time').innerHTML = '<span class="happyNewYear">新年快乐</p>';        } else {            // 大于0则还未过年            document.querySelector('#newYear .title').innerHTML = '距离2025年新年：'            // 大于一天则直接渲染天数            if (second > 86400) {                document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`            } else {                // 小于一天则使用时分秒计时。                let h = nol(parseInt(second / 3600));                second %= 3600;                let m = nol(parseInt(second / 60));                second %= 60;                let s = nol(second);                document.querySelector('#newYear .newYear-time').innerHTML = `<span class="time">${h}:${m}:${s}</span></span>`;                // 计时                newYearTimer = setTimeout(time, 1000);            }        }    }    // 元宝飘落    jQuery(document).ready(function ($) {        $('#newYear').wpSuperSnow({            flakes: ['', '', ''],            totalFlakes: '100',            zIndex: '999999',            maxSize: '30',            maxDuration: '20',            useFlakeTrans: false        });    });}// Pjax适配：若没有开启Pjax这里直接是newYear()即可// 开了Pjax的用以下两句document.addEventListener('pjax:complete', newYear);document.addEventListener('DOMContentLoaded', newYear);]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>即刻短文</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我的装备</title>
-      <link href="/equipment/index.html"/>
-      <url>/equipment/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/json/music.json"/>
       <url>/json/music.json</url>
       
@@ -450,20 +464,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>泰拉大陆</title>
-      <link href="/wordScenery/index.html"/>
-      <url>/wordScenery/index.html</url>
+      <title>我的装备</title>
+      <link href="/equipment/index.html"/>
+      <url>/equipment/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -483,11 +486,33 @@
     
     
     <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>友人帐</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
         <content type="html"><![CDATA[<h1>我的友链</h1><div class="tabs" id="mylink"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="mylink-1">🙋 butterfly-💭candy</button><button type="button" class="tab " data-href="mylink-2">☀️Volantis</button><button type="button" class="tab " data-href="mylink-3">🌴General</button><button type="button" class="tab " data-href="mylink-4">Html</button></ul><div class="tab-contents"><div class="tab-item-content active" id="mylink-1"><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Plasmon222</span></span><br><span class="line">  <span class="attr">link:</span> <span class="string">https://blog.loveak.top/</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</span></span><br><span class="line">  <span class="attr">descr:</span> <span class="string">✨行则将至，做则必成✨</span></span><br><span class="line">  <span class="attr">siteshot:</span> <span class="string">https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-2"><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Plasmon222&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;screenshot&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://bu.dusays.com/2023/07/26/64c07513293ef.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://blog.loveak.top/&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;avatar&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://bu.dusays.com/2023/09/01/64f19e6f783a9.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;✨行则将至，做则必成✨&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span><span class="punctuation">:</span> <span class="string">&quot;离子&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div><div class="tab-item-content" id="mylink-3"><table><thead><tr><th align="left">名称</th><th align="left">数值</th></tr></thead><tbody><tr><td align="left">站点名称</td><td align="left">Plasmon222</td></tr><tr><td align="left">站点截图</td><td align="left"><a href="https://bu.dusays.com/2023/07/26/64c07513293ef.jpg">https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</a></td></tr><tr><td align="left">站点链接</td><td align="left"><a href="https://blog.loveak.top/">https://blog.loveak.top/</a></td></tr><tr><td align="left">站长头像</td><td align="left"><a href="https://bu.dusays.com/2023/09/01/64f19e6f783a9.png">https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</a></td></tr><tr><td align="left">站点描述</td><td align="left">✨行则将至，做则必成✨</td></tr><tr><td align="left">站点关键词</td><td align="left">离子, 个人博客， 生活</td></tr></tbody></table></div><div class="tab-item-content" id="mylink-4"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://blog.loveak.top/&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;external nofollow&quot;</span>&gt;</span>离子-✨行则将至，做则必成✨<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><details class="folding-tag" ><summary> 友情链接页免责声明 </summary>              <div class='content'>              <h2 id="免责声明"><a href="#免责声明" class="headerlink" title="免责声明"></a>免责声明</h2><p>本博客遵守中华人民共和国相关法律。本页内容仅作为方便学习而产生的快速链接的链接方式，对与友情链接中存在的链接、好文推荐链接等均为其他网站。我本人能力有限无法逐个甄别每篇文章的每个字，并无法获知是否在收录后原作者是否对链接增加了违反法律甚至其他破坏用户计算机等行为。因为部分友链网站甚至没有做备案、域名并未做实名认证等，所以友链网站均可能存在风险，请你须知。</p><p>所以在我力所能及的情况下，我会包括但不限于：</p><ol><li>针对收录的博客中的绝大多数内容通过标题来鉴别是否存在有风险的内容</li><li>在收录的友链好文推荐中检查是否存在风险内容</li></ol><p>但是你在访问的时候，仍然无法避免，包括但不限于：</p><ol><li>作者更换了超链接的指向，替换成了其他内容</li><li>作者的服务器被恶意攻击、劫持、被注入恶意内容</li><li>作者的域名到期，被不法分子用作他用</li><li>作者修改了文章内容，增加钓鱼网站、广告等无效信息</li><li>不完善的隐私保护对用户的隐私造成了侵害、泄漏</li></ol><p>最新文章部分为机器抓取，本站作者未经过任何审核和筛选，本着友链信任原则添加的。如果你发现其中包含违反中华人民共和国法律的内容，请及时联系和举报。该友链会被拉黑。</p><p>如果因为从本页跳转给你造成了损失，深表歉意，并且建议用户如果发现存在问题在本页面进行回复。通常会很快处理。如果长时间无法得到处理，建议联系<code>plasmon222@qq.com</code>。</p>              </div>            </details><details class="folding-tag" ><summary> 出现问题的友链 </summary>              <div class='content'>              <h2 id="出现问题的友链"><a href="#出现问题的友链" class="headerlink" title="出现问题的友链"></a>出现问题的友链</h2><p>如果友链出现问题会展示在这里，如果已解决问题还请告知。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>              </div>            </details><h2 id="友情链接申请"><a href="#友情链接申请" class="headerlink" title="友情链接申请"></a>友情链接申请</h2><details class="folding-tag" ><summary> ✅ 加入本站友链须知 </summary>              <div class='content'>              <h2 id="本站添加的友链要求"><a href="#本站添加的友链要求" class="headerlink" title="本站添加的友链要求"></a>本站添加的友链要求</h2><ol><li>能够正常访问,访问速度不会太慢</li><li>含本站友链，友链互换~</li><li>网站类型为<strong>个人博客</strong></li></ol><p>请（<a onclick="anzhiyu.addFriendLink()" href="#post-comment">点击这里快速添加</a>） 站点信息申请友情链接，申请后在我不忙的时候会统一添加，即使不通过也会给予邮件回复。</p><h2 id="你提交的信息有可能被修改"><a href="#你提交的信息有可能被修改" class="headerlink" title="你提交的信息有可能被修改"></a>你提交的信息有可能被修改</h2><p>如果有修改，我会将修改内容进行告知。</p><h2 id="时效问题"><a href="#时效问题" class="headerlink" title="时效问题"></a>时效问题</h2><p>博客主目前为学生和半个打工人，博客邮件每次都会查看，但是因为学习与工作原因，假如不忙的情况下，通常在三天内更新。忙的时候（考前复习，项目加急上线，加班）等情况通常在7-15天内更新。</p><p>同时由于Hexo博客的限制，在有文章写作的时候，有时候会将友链囤起来，与文章一块发布。</p><p>如果是加友链很急的那种，连一天时间都等不了的，建议还是不要加了。本人博客主打的就是一个随缘更新，在互联网上开辟的自己的一块养老空间。</p><h2 id="提交友链信息"><a href="#提交友链信息" class="headerlink" title="提交友链信息"></a>提交友链信息</h2><p>为了避免图床问题，建议你将头像存储到稳定的图床。</p><ol><li>我的名称: <code>Plasmon222</code></li><li>网站地址: <code>https://blog.loveak.top/</code></li><li>描述: <code>✨行则将至，做则必成✨</code></li><li>头像: <code>https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</code></li><li>站点截图: <code>https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</code></li></ol><p>参照以下格式留言 📋 即可。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">昵称（请勿包含博客等字样）：</span></span><br><span class="line"><span class="string">网站地址（要求博客地址，请勿提交个人主页）：</span></span><br><span class="line"><span class="string">头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：</span></span><br><span class="line"><span class="string">描述：</span></span><br><span class="line"><span class="string">站点截图:(可选)：</span></span><br></pre></td></tr></table></figure><p>示例 📢：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">昵称：Plasmon222</span></span><br><span class="line"><span class="string">网站地址：https://blog.loveak.top/</span></span><br><span class="line"><span class="string">头像图片url：https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</span></span><br><span class="line"><span class="string">描述：✨行则将至，做则必成✨</span></span><br><span class="line"><span class="string">站点截图:(可选)：https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</span></span><br></pre></td></tr></table></figure><div class="tip faa-horizontal animated"><p>站点截图建议自己提供，尺寸尽量不要大于 300*300。</p><p>未提供站点预览图的，本站会根据贵站链接调用以下 API 自动获取贵站的站点截图。</p><p>对于做了反扒措施的站点，API 获取的将是反扒页面，望知悉。</p></div><p>站点截图建议使用以下 API 获取以匹配本站样式。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/anheyu.com/https://&lt;你的域名&gt;/</span><br></pre></td></tr></table></figure>              </div>            </details><ol><li>我的名称: <code>Plasmon222</code></li><li>网站地址: <code>https://blog.loveak.top/</code></li><li>描述: <code>✨行则将至，做则必成✨</code></li><li>头像: <code>https://bu.dusays.com/2023/09/01/64f19e6f783a9.png</code></li><li>站点截图: <code>https://bu.dusays.com/2023/07/26/64c07513293ef.jpg</code></li></ol><p  style="padding: 0px 0px 0px 0.8rem;">请<strong>勾选</strong>你符合的条件：</p><div id="friendlink_checkboxs" style="padding: 0px 0px 0px 1.6rem;">  <p>    <label class="checkbox"><input type="checkbox" id="checkbox1" onclick="checkForm()">我已添加 <b>Plasmon222</b> 博客的友情链接</label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox2" onclick="checkForm()">我的链接主体为 <b>个人</b>，网站类型为<b>博客</b></label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox3" onclick="checkForm()">我的网站现在可以在中国大陆区域正常访问</label>  </p>  <p>    <label class="checkbox"><input type="checkbox" id="checkbox4" onclick="checkForm()">网站内容符合中国大陆法律法规</label>  </p>    <p>    <label class="checkbox"><input type="checkbox" id="checkbox5" onclick="checkForm()">待人友善，和谐美好。</label>  </p></div><script>    var twikooSubmit = document.getElementsByClassName("tk-submit")[0];    if(twikooSubmit) {      twikooSubmit.style.opacity = "0";    }    function checkForm() {        var checkbox1 = document.getElementById("checkbox1");        var checkbox2 = document.getElementById("checkbox2");        var checkbox3 = document.getElementById("checkbox3");        var checkbox4 = document.getElementById("checkbox4");        var checkbox5 = document.getElementById("checkbox5");        var twikooSubmit = document.getElementsByClassName("tk-submit")[0];        if (checkbox1.checked && checkbox2.checked && checkbox3.checked && checkbox4.checked && checkbox5.checked) {            twikooSubmit.style.opacity = "1";            twikooSubmit.style.height = "auto";            twikooSubmit.style.overflow = "auto";            var input = document.getElementsByClassName('el-textarea__inner')[0];            let evt = document.createEvent('HTMLEvents');            evt.initEvent('input', true, true);            input.value = '昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url：\n描述：\n';            input.dispatchEvent(evt);            input.focus();            input.setSelectionRange(-1, -1);        } else {            twikooSubmit.style.opacity = "0";            twikooSubmit.style.height = "0";            twikooSubmit.style.overflow = "hidden";        }    }</script><style>.tk-comments > .tk-submit {  opacity: 0;  height: 0;  transition: opacity 0.5s, height 0.5s;  overflow: hidden;}</style>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>泰拉大陆</title>
+      <link href="/wordScenery/index.html"/>
+      <url>/wordScenery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
